@@ -19,7 +19,8 @@ if [ ! -d "$TPM_DIR" ]; then
     echo "⬇️ Installing TPM..."
     git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
 else
-    echo "✅ TPM already installed."
+    echo "✅ TPM already installed - fetching latest commits"
+	git fetch
 fi
 
 echo "👉 Start tmux with: tmux -f ~/dotfiles/.tmux.conf"
